@@ -1,0 +1,106 @@
+
+/* Imagen Perfil */
+.image {
+   height: 300px;
+   width: 300px;
+   display: block;
+   margin: auto;
+   border-radius: 300px;
+   cursor: pointer;
+}
+
+#image {
+   background: url("../imgs/profiles/default.png");
+   background-size: cover!important;
+   background-repeat: no-repeat!important;
+}
+
+#btn-image {
+   background: rgba(40,40,40,.65);
+   color: rgba(255,255,255,.75);
+   font-size: 18pt;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   transition: opacity .5s;
+   opacity: 0;
+}
+
+#showpass , #arrow-pass {
+   cursor: pointer;
+}
+/*  Ajustar Imagen Nav */
+.adjust {
+   background-size: cover!important;
+   background-repeat: no-repeat!important;
+}
+
+
+ /*Ocultar Campos Tabla*/
+
+/*tr.respon .hidden{*/
+   /*display: table-cell;*/
+/*}*/
+
+/*@media (max-width:1475px){*/
+   /*tr.respon .hidden{*/
+      /*display: none;*/
+   /*}*/
+/*}*/
+
+
+
+
+
+/* Table Responsive Movile */
+
+table{
+   font-size: 1em!important;
+
+}
+tr.respon .hidden{
+   display: table-cell;
+}
+
+@media (max-width:700px){
+
+   table{
+      font-size: 0.80em!important;
+   }
+}
+
+
+/* Table Responsive */
+
+
+.table-container {
+   overflow-x: auto !important;
+}
+
+.table-rwd{
+   min-width: 900px;
+}
+
+
+/* Cards  */
+
+.fs-2{
+   font-size: 1.10em!important;
+}
+
+
+/*  Msg Alerta */
+
+.alert-bottom{
+   float: right;
+   overflow-x: 100px;
+
+
+}
+
+.msg-alert{
+
+
+
+}
