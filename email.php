@@ -1,7 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: KevinOltra
- * Date: 31/03/2020
- * Time: 22:17
- */
+session_start();
+require 'entity/Usuario.php';
+
+$user=isset($_SESSION['user']) ? unserialize($_SESSION['user']):NULL;
+
+if ($user == NULL){
+    header('Location:login.php');
+    die();
+}
+
+$image = $user->getProfilePicture();
+
+
+
+include "views/email.view.php";

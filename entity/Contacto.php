@@ -18,6 +18,14 @@ class Contacto{
      */
     private $localizacion;
     /**
+     * @var string
+     */
+    private $localidad;
+    /**
+     * @var int
+     */
+    private $cp;
+    /**
      * @var int
      */
     private $telefono1;
@@ -43,16 +51,20 @@ class Contacto{
      * @param string $nombre
      * @param string $contacto
      * @param string $localizacion
+     * @param string $localidad
+     * @param int $cp
      * @param int $telefono1
      * @param int $telefono2
      * @param string $email
      * @param string $observaciones
      * @param string $fecha
      */
-    public function __construct( string $nombre='', string $contacto='', string $localizacion='', int $telefono1=0, int $telefono2=0, string $email='', string $observaciones='',string $fecha=''){
+    public function __construct( string $nombre='', string $contacto='', string $localizacion='', string $localidad='', int $cp=0, int $telefono1=0, int $telefono2=0, string $email='', string $observaciones='',string $fecha=''){
         $this->nombre = $nombre;
         $this->contacto = $contacto;
         $this->localizacion = $localizacion;
+        $this->localidad = $localidad;
+        $this->cp = $cp;
         $this->telefono1 = $telefono1;
         $this->telefono2 = $telefono2;
         $this->email = $email;
@@ -70,6 +82,8 @@ class Contacto{
             'nombre'=>$this->getNombre(),
             'contacto'=>$this->getContacto(),
             'localizacion'=>$this->getLocalizacion(),
+            'localidad'=>$this->getLocalidad(),
+            'cp'=>$this->getCp(),
             'telefono1'=>$this->getTelefono1(),
             'telefono2'=>$this->getTelefono2(),
             'email'=>$this->getEmail(),
@@ -150,6 +164,41 @@ class Contacto{
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getLocalidad()
+    {
+        return $this->localidad;
+    }
+
+    /**
+     * @param string $localidad
+     * @return Contacto
+     */
+    public function setLocalidad($localidad)
+    {
+        $this->localidad = $localidad;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCp()
+    {
+        return $this->cp;
+    }
+
+    /**
+     * @param int $cp
+     * @return Contacto
+     */
+    public function setCp($cp)
+    {
+        $this->cp = $cp;
+        return $this;
+    }
     /**
      * @return int
      */
@@ -239,6 +288,8 @@ class Contacto{
         $this->fecha = $fecha;
         return $this;
     }
+
+
     /**
      * @return string
      */

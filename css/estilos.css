@@ -1,86 +1,147 @@
 
-/* Imagen Perfil */
-.image {
-   height: 300px;
-   width: 300px;
-   display: block;
-   margin: auto;
-   border-radius: 300px;
-   cursor: pointer;
+ /*---------------- Index ----------------*/
+
+/* Botones Utiles */
+ /*acortar el ancho del input en tabla*/
+ .sorting_asc{
+     width: 1px!important;
+ }
+/*botones de accion*/
+.botones{
+   display: table!important;
+   margin-left: auto;
 }
 
-#image {
-   background: url("../imgs/profiles/default.png");
-   background-size: cover!important;
-   background-repeat: no-repeat!important;
+ /* RadioButton de la Tabla */
+  .radiobutton{
+     display: block;
+     position: relative;
+     padding-left: 0px;
+     margin-bottom: 12px;
+     cursor: pointer;
+     font-size: 22px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+ .radiobutton input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+ }
+ .checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 25px;
+     width: 25px;
+     background-color: #c0c0c0;
+     border-radius: 50%;
+ }
+
+ .radiobutton:hover input ~ .checkmark {
+     background-color: #2196F3;
+ }
+ .radiobutton input:checked ~ .checkmark {
+     background-color: #2196F3;
+ }
+ .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+ }
+ .radiobutton input:checked ~ .checkmark:after {
+     display: block;
+ }
+ .radiobutton .checkmark:after {
+     top: 9px;
+     left: 9px;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background: white;
+ }
+ /* RadioButton de la Galleria */
+
+#radiobuttonGallery{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    margin-bottom: 0;
 }
 
-#btn-image {
-   background: rgba(40,40,40,.65);
-   color: rgba(255,255,255,.75);
-   font-size: 18pt;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   transition: opacity .5s;
-   opacity: 0;
+ .checkmarkGallery {
+     position: absolute;
+     height: 25px;
+     width: 25px;
+     background-color: #c0c0c0;
+     border-radius: 50%;
+ }
+
+ .radiobutton:hover input ~ .checkmarkGallery {
+     background-color: #2196F3;
+ }
+ .radiobutton input:checked ~ .checkmarkGallery {
+     background-color: #2196F3;
+ }
+ .checkmarkGallery:after {
+     content: "";
+     position: relative;
+     display: none;
+ }
+ .radiobutton input:checked ~ .checkmarkGallery:after {
+     display: block;
+ }
+ .radiobutton .checkmarkGallery:after {
+     top: 9px;
+     left: 9px;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background: white;
+ }
+
+/* Table Responsive */
+
+ /*.table{*/
+     /*width: 100%!important;*/
+ /*}*/
+.table-container {
+   overflow-x: auto !important;
 }
-
-#showpass , #arrow-pass {
-   cursor: pointer;
+.table-rwd{
+   min-width: 900px;
 }
-/*  Ajustar Imagen Nav */
-.adjust {
-   background-size: cover!important;
-   background-repeat: no-repeat!important;
-}
-
-
- /*Ocultar Campos Tabla*/
-
-/*tr.respon .hidden{*/
-   /*display: table-cell;*/
-/*}*/
-
-/*@media (max-width:1475px){*/
-   /*tr.respon .hidden{*/
-      /*display: none;*/
-   /*}*/
-/*}*/
-
-
-
-
 
 /* Table Responsive Movile */
 
 table{
    font-size: 1em!important;
-
 }
+
 tr.respon .hidden{
    display: table-cell;
 }
 
 @media (max-width:700px){
-
    table{
       font-size: 0.80em!important;
    }
 }
+ /*Ocultar Campos Tabla*/
 
+ /*tr.respon .hidden{*/
+ /*display: table-cell;*/
+ /*}*/
 
-/* Table Responsive */
-
-
-.table-container {
-   overflow-x: auto !important;
-}
-
-.table-rwd{
-   min-width: 900px;
-}
+ /*@media (max-width:1475px){*/
+ /*tr.respon .hidden{*/
+ /*display: none;*/
+ /*}*/
+ /*}*/
 
 
 /* Cards  */
@@ -95,12 +156,75 @@ tr.respon .hidden{
 .alert-bottom{
    float: right;
    overflow-x: 100px;
-
-
 }
 
-.msg-alert{
-
-
-
+.msg-alert {
+/*position: relative;*/
+    right: 50px!important;
+    margin-bottom: 0.3rem!important;
 }
+ /*  Paginacion */
+
+
+
+
+
+
+
+ /*---------------- Perfil ----------------*/
+
+ /* Imagen Perfil */
+ .image {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 300px;
+    cursor: pointer;
+ }
+
+ #image {
+    background: url("../imgs/profiles/default.png");
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+ }
+
+ #btn-image {
+    background: rgba(40,40,40,.65);
+    color: rgba(255,255,255,.75);
+    font-size: 18pt;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: opacity .5s;
+    opacity: 0;
+ }
+
+ #showpass , #arrow-pass {
+    cursor: pointer;
+ }
+ /*  Ajustar Imagen Nav */
+ .adjust {
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+ }
+
+ /*---------------- Calendario ----------------*/
+
+ #ui-datepicker-div table tbody tr td a{
+
+     border: none!important;
+     background: white;
+     color: #4287f5;
+
+ }
+
+ .ui-datepicker-header{
+     background-color: #609bf7;
+
+ }
+
+ .ui-datepicker-today {
+      background-color: #4287f5;
+  }

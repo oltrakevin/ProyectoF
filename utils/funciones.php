@@ -3,7 +3,7 @@ function validarRegistro(){
     $errores=[];
 //--nombre
     if(empty($_POST["name"]) || strlen($_POST["name"]) < 5 ){
-        $errores[] = "El nombre es REQUERIDO y mayor a 5 caracteres";
+        $errores[] = "El nombre es REQUERIDO";
     }
     if (!preg_match('`[A-Z]`',$_POST["name"])){
         $errores[] = "El Nombre ha de tener mayusculas";

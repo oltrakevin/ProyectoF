@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Charts</title>
+    <title>Admin FCTs - Perfil</title>
 
     <!-- Custom fonts for this template-->
+    <link rel="icon" type="image/png" href="imgs/favicon/agenda.png">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -47,7 +47,7 @@
                 <!-- Page Heading -->
                 <h1 class="h3 mb-2 text-gray-800">Perfil</h1>
 <!--                <p class="mb-4">Descripcion</p>-->
-                <form id="upload" action="php/change-image.php" method="post" enctype="multipart/form-data">
+                <form id="upload" action="php/change-image.process.php" method="post" enctype="multipart/form-data">
                     <input class="d-none form-control" id="file-upload" type="file" name="file-upload">
                 </form>
                 <form id="profile" method="post" >
@@ -60,12 +60,9 @@
                                     <i class="fa fa-3x fa-camera"></i>
                                     <p class="my-auto pt-2">Cambiar Imagen</p>
                                 </div>
-
                             </div>
-
-
-
                         </div>
+
                         <div class="col-md-12 col-lg-6 my-auto">
                             <div class="form-group d-none">
                                 <label for="id">id</label>
@@ -80,8 +77,8 @@
                                 <input type="text" class="form-control" id="lastname" name="lastname" value="<?=$user->getApellidos() ?>">
                             </div>
                         </div>
-
                     </div>
+
                     <div class="row mt-lg-5">
                         <div class="col-md-12 col-lg-6">
                             <div class="form-group">
@@ -102,6 +99,7 @@
                             <p>Cambiar Contraseña <i id="arrow-pass" class="fa fa-sort-down"></i></p>
                         </div>
                     </div>
+
                     <div class="row d-none" id="changepass" >
                         <div class="col-md-12 col-lg-6">
                             <div class="form-group">
@@ -115,9 +113,7 @@
                                 <input type="password" class="form-control" id="newpass" name="newpass">
                             </div>
                         </div>
-
                     </div>
-
 
                     <div class="row">
                         <div class="col text-center mt-5">
@@ -133,13 +129,8 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Kevin Oltra 2019</span>
-                </div>
-            </div>
-        </footer>
+        <?php include "views/partials/footer.partial.php";       ?>
+
         <!-- End of Footer -->
 
     </div>

@@ -5,7 +5,7 @@ require 'entity/Usuario.php';
 $user=isset($_SESSION['user']) ? unserialize($_SESSION['user']):NULL;
 
 if ($user != NULL){
-    header('Location:index.php');
+    header('Location:contactos.php');
     die();
 }
 

@@ -12,9 +12,8 @@ $(function () {
 
     $('#showpass').on('click', function () {
         $('#arrow-pass').toggleClass("fa-sort-down fa-sort-up");
-
         $('#changepass').toggleClass("d-none d-flex")
-    })
+    });
     //btn.mouseover(toggleOpacity());
     //btn.off('hover', toggleOpacity());
     $("#file-upload").change(function (e){
@@ -34,7 +33,7 @@ $(function () {
         var newpass= $('#newpass').val();
         console.log(name);
 
-        $.post('php/update-profile.php',{id,name,lastname,email,date,oldpass,newpass}, function (response){
+        $.post('php/update-profile.process.php',{id,name,lastname,email,date,oldpass,newpass}, function (response){
             console.log(response);
             if (response.includes('success')){
                 $('#profileName').html(name);
